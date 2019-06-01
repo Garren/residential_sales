@@ -1,0 +1,21 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host:     <%= ENV.fetch('DATABASE_HOST') %>
+  username: <%= ENV.fetch('POSTGRES_USER') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') %>
+  database: <%= ENV.fetch('POSTGRES_DB') %>
+  pool: 5
+  variables:
+    statement_timeout: 5000
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: residential_sales_test
+
+production:
+  <<: *default
