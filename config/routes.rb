@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'residential/index'
 
+  get 'residential/data', :defaults => { :format => 'json' }
+  root :to => 'residential#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
