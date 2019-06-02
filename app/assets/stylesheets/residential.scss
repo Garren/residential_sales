@@ -1,6 +1,8 @@
 // Place all the styles related to the residential controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// pie
 body, .arc text {
   font: 10px sans-serif;
   text-anchor: middle;
@@ -37,6 +39,7 @@ g.arc {
   shape-rendering: crispEdges;
 }
 
+// scatter
 .dot {
   stroke: #000;
 }
@@ -48,4 +51,26 @@ g.arc {
   background-color: white;
   border: 1px dotted grey;
   pointer-events:none;
+}
+
+// boxplot
+.box {
+  font: 10px sans-serif;
+}
+
+.box line,
+.box rect,
+.box circle {
+  fill: steelblue;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.box .center {
+  stroke-dasharray:3,3;
+}
+
+.box .outlier {
+  fill: none;
+  stroke: #000;
 }
