@@ -36,3 +36,16 @@ g.arc {
   stroke:#000;
   shape-rendering: crispEdges;
 }
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width:200px;
+  height:28px;
+  background-color: white;
+  border: 1px dotted grey;
+  pointer-events:none;
+}
